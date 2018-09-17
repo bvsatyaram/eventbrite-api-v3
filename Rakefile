@@ -14,13 +14,13 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name = "eventbrite-api"
-  gem.homepage = "http://github.com/BrunoChauvet/eventbrite-api"
+  gem.name = "eventbrite-api-v3"
+  gem.homepage = "https://github.com/bvsatyaram/eventbrite-api"
   gem.license = "MIT"
   gem.summary = %Q{Integrate with Eventbrite API}
   gem.description = %Q{Integrate with Eventbrite API}
-  gem.email = "it@maestrano.com"
-  gem.authors = ["BrunoChauvet"]
+  gem.email = "bvsatyaram@gmail.com"
+  gem.authors = ["BV Satyaram", "BrunoChauvet"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -45,7 +45,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "eventbrite-api #{version}"
+  rdoc.title = "eventbrite-api-v3 #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
