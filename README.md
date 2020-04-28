@@ -1,5 +1,4 @@
-eventbrite-api
-===============
+# eventbrite-api
 
 [![Build Status](https://secure.travis-ci.org/maestrano/eventbrite-api.png?branch=master)](http://travis-ci.org/maestrano/eventbrite-api)
 
@@ -11,7 +10,7 @@ Integrate with ![Eventbrite API](http://developer.eventbrite.com/)
 
 Add this line to your application's Gemfile:
 
-`gem 'eventbrite-api'`
+`gem 'eventbrite-api-v3'`
 
 And then execute:
 
@@ -19,7 +18,9 @@ And then execute:
 
 Or install it yourself as:
 
-`gem install eventbrite-api`
+`gem install eventbrite-api-v3`
+
+_Note: In versions prior to 0.0.5, the gem was called `eventbrite-api`_
 
 ## Usage
 
@@ -29,9 +30,8 @@ If you've already got an OAuth access token, feel free to skip to API Client Set
 
 The Eventbrite API uses 3 legged OAuth2. You need to implement the following controller methods and store the `access_token` if needed.
 
-
-``` ruby
-    class EventbriteSessionController  
+```ruby
+    class EventbriteSessionController
       def new
         redirect_to eventbrite_client.get_access_code_url
       end
@@ -56,7 +56,7 @@ The Eventbrite API uses 3 legged OAuth2. You need to implement the following con
 
 #### Create an api_client
 
-``` ruby
+```ruby
     api_client = Eventbrite::Api::Client.new({
       consumer: {
         key:    YOUR_CONSUMER_KEY,
@@ -123,6 +123,7 @@ Fetches the entire collection of elements
 #### Events
 
 Search events
+
 ```ruby
   events = api_client.event.search
   more_events = api_client.event.next_page
@@ -131,11 +132,13 @@ Search events
 ```
 
 Create event
+
 ```ruby
   event = api_client.event.create({'name' => 'My Event', ...})
 ```
 
 Publish/Unpublish events
+
 ```ruby
   response = api_client.event.publish('13270934723')
   response = api_client.event.unpublish('13270934723')
@@ -144,11 +147,13 @@ Publish/Unpublish events
 #### Event ticket class
 
 Create an event ticket class for event '123'
+
 ```ruby
   event = api_client.event_ticket_class.create({'name' => 'My Ticket', ...}, {event_id: '123'})
 ```
 
 Update event ticket class '456' for event '123'
+
 ```ruby
   event = api_client.event_ticket_class.update('456', {'name' => 'My Ticket', ...}, {event_id: '123'})
 ```
@@ -156,6 +161,7 @@ Update event ticket class '456' for event '123'
 #### Owned Events
 
 User owned events
+
 ```ruby
   events = api_client.owned_event.get({'user_id'=>'133925426255'})
 ```
@@ -163,6 +169,7 @@ User owned events
 #### Owned Event Attendees
 
 User owned event attendees
+
 ```ruby
   event_attendees = api_client.owned_event_attendee.get({'user_id'=>'133925426255'})
 ```
@@ -170,6 +177,7 @@ User owned event attendees
 #### Owned Event Orders
 
 User owned event orders
+
 ```ruby
   event_orders = api_client.owned_event_order.get({'user_id'=>'133925426255'})
 ```
