@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["BV Satyaram".freeze, "BrunoChauvet".freeze]
-  s.date = "2018-09-17"
+  s.date = "2020-04-28"
   s.description = "Integrate with Eventbrite API".freeze
   s.email = "bvsatyaram@gmail.com".freeze
   s.extra_rdoc_files = [
@@ -44,6 +44,7 @@ Gem::Specification.new do |s|
     "lib/eventbrite/api/model/owned_event.rb",
     "lib/eventbrite/api/model/owned_event_attendee.rb",
     "lib/eventbrite/api/model/owned_event_order.rb",
+    "lib/eventbrite/api/model/structured_content.rb",
     "lib/eventbrite/api/model/user.rb",
     "lib/eventbrite/api/model/user_contact.rb",
     "lib/eventbrite/api/model/user_contact_list.rb",
@@ -73,7 +74,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "https://github.com/bvsatyaram/eventbrite-api".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "2.6.12".freeze
+  s.rubygems_version = "3.0.6".freeze
   s.summary = "Integrate with Eventbrite API".freeze
 
   if s.respond_to? :specification_version then
