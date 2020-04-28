@@ -26,6 +26,7 @@ module Eventbrite
         model :OwnedEvent
         model :OwnedEventAttendee
         model :OwnedEventOrder
+        model :StructuredContent
 
         @redirect_uri         = options[:redirect_uri]
         @consumer             = options[:consumer]
