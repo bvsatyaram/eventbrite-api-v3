@@ -84,13 +84,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  deep_merge (~> 1.2.1)
-  jeweler (~> 2.3.9)
-  oauth2 (~> 1.0)
-  rspec (~> 3.9.0)
-  simplecov (~> 0.18.5)
-  timecop (~> 0.9.1)
-  webmock (~> 3.8.3)
+  deep_merge (>= 1.2.1)
+  jeweler (>= 2.3.9)
+  oauth2 (>= 1.0)
+  rspec (>= 3.9.0)
+  simplecov (>= 0.18.5)
+  timecop (>= 0.9.1)
+  webmock (>= 3.8.3)
 
 BUNDLED WITH
    1.17.3
