@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["BV Satyaram".freeze, "BrunoChauvet".freeze]
-  s.date = "2020-04-28"
-  s.description = "Integrate with Eventbrite API".freeze
+  s.date = "2020-04-29"
+  s.description = "This gem allows easy integration with Eventbrite API v3.".freeze
   s.email = "bvsatyaram@gmail.com".freeze
   s.extra_rdoc_files = [
     "LICENSE",
@@ -72,7 +72,7 @@ Gem::Specification.new do |s|
     "spec/fixtures/users/me.json",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "https://github.com/bvsatyaram/eventbrite-api".freeze
+  s.homepage = "https://github.com/bvsatyaram/eventbrite-api-v3".freeze
   s.licenses = ["MIT".freeze]
   s.rubygems_version = "3.0.6".freeze
   s.summary = "Integrate with Eventbrite API".freeze
@@ -81,18 +81,18 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<oauth2>.freeze, [">= 0"])
-      s.add_runtime_dependency(%q<deep_merge>.freeze, [">= 0"])
-      s.add_development_dependency(%q<jeweler>.freeze, [">= 0"])
+      s.add_runtime_dependency(%q<oauth2>.freeze, ["~> 1.0"])
+      s.add_runtime_dependency(%q<deep_merge>.freeze, ["~> 1.2.1"])
+      s.add_development_dependency(%q<jeweler>.freeze, ["~> 2.3.9"])
     else
-      s.add_dependency(%q<oauth2>.freeze, [">= 0"])
-      s.add_dependency(%q<deep_merge>.freeze, [">= 0"])
-      s.add_dependency(%q<jeweler>.freeze, [">= 0"])
+      s.add_dependency(%q<oauth2>.freeze, ["~> 1.0"])
+      s.add_dependency(%q<deep_merge>.freeze, ["~> 1.2.1"])
+      s.add_dependency(%q<jeweler>.freeze, ["~> 2.3.9"])
     end
   else
-    s.add_dependency(%q<oauth2>.freeze, [">= 0"])
-    s.add_dependency(%q<deep_merge>.freeze, [">= 0"])
-    s.add_dependency(%q<jeweler>.freeze, [">= 0"])
+    s.add_dependency(%q<oauth2>.freeze, ["~> 1.0"])
+    s.add_dependency(%q<deep_merge>.freeze, ["~> 1.2.1"])
+    s.add_dependency(%q<jeweler>.freeze, ["~> 2.3.9"])
   end
 end
 
