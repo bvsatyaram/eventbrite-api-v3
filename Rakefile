@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "eventbrite-api-v3"
-  gem.homepage = "https://github.com/bvsatyaram/eventbrite-api"
+  gem.homepage = "https://github.com/bvsatyaram/eventbrite-api-v3"
   gem.license = "MIT"
   gem.summary = %Q{Integrate with Eventbrite API}
-  gem.description = %Q{Integrate with Eventbrite API}
+  gem.description = %Q{This gem allows easy integration with Eventbrite API v3.}
   gem.email = "bvsatyaram@gmail.com"
   gem.authors = ["BV Satyaram", "BrunoChauvet"]
   # dependencies defined in Gemfile
